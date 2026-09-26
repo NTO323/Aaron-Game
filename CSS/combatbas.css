@@ -1,0 +1,134 @@
+
+#combat-bas{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:25%;
+    display:flex;
+    gap:10px;
+    padding:10px;
+    box-sizing:border-box;
+}
+
+#dialogue-combat{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:30%;
+    height:15%;
+    background:#772222;
+    box-sizing:border-box;
+}
+
+#combat-bas-zone1,
+#combat-bas-zone2,
+#combat-bas-pierre1,
+#combat-bas-pierre2{
+    flex:1;
+    border:2px solid #555;
+    box-sizing:border-box;
+}
+
+#combat-bas-zone1{
+    background:#333;
+}
+
+#combat-bas-zone2{
+    background:#555;
+}
+
+#combat-bas-pierre1{
+    background:#27452c;
+}
+
+#combat-bas-pierre2{
+    background:#493027;
+}
+
+#combat-bas-zone1,
+#combat-bas-zone2{
+    flex:1;
+    border:2px solid #555;
+    box-sizing:border-box;
+}
+
+#combat-bas-zone1{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:1fr 1fr;
+    gap:8px;
+}
+
+#personnages-combat-bas{
+    width:100%;
+    height:100%;
+    display:grid;
+    grid-template-columns:repeat(2,80px);
+    grid-template-rows:repeat(2,80px);
+    gap:2px;
+    align-content:center;
+    justify-content:center;
+}
+
+.personnage-combat-bas{
+    width:80px;
+    height:80px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:2px;
+    border:1px solid #555;
+    background:#292929;
+    color:white;
+    padding:2px;
+    box-sizing:border-box;
+    overflow:hidden;
+}
+
+.personnage-combat-bas img{
+    width:40px;
+    height:40px;
+    object-fit:contain;
+}
+
+.personnage-combat-bas span{
+    font-size:5px;
+}
+
+
+#combat-bas-zone2{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:10px;
+    padding:15px;
+}
+
+.bouton-combat{
+    width:100%;
+    flex:1;
+    border:2px solid #666;
+    background:#292929;
+    color:white;
+    font-size:14px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.bouton-combat:hover{
+    background:#444;
+}
+.personnage-combat-selectionne{
+    border:2px solid #fff;
+    transform:scale(1.03);
+}
+.personnage-combat-bas.mode-offensif{
+    filter:sepia(1) saturate(5) hue-rotate(315deg);
+}
+
+.personnage-combat-bas.mode-defensif{
+    filter:sepia(1) saturate(5) hue-rotate(180deg);
+}
+

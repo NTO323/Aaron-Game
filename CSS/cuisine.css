@@ -1,0 +1,183 @@
+#cooking {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+#cooking h2 {
+    margin: 5px 0 25px;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#cooking-selection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 0;
+    flex: 1;
+}
+
+#cooking-slots {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.cooking-slot {
+    width: 75px;
+    height: 75px;
+    box-sizing: border-box;
+    border: 2px dashed currentColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.cooking-slot span {
+    font-size: 32px;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.cooking-slot img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.cooking-slot:active {
+    transform: scale(0.92);
+}
+
+#cook-button {
+    display: block;
+    min-width: 180px;
+    padding: 12px 25px;
+    margin: 0 auto 15px;
+    border: 2px solid currentColor;
+    background: transparent;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease;
+}
+
+#cook-button:hover {
+    background: currentColor;
+    color: #000;
+}
+
+#cook-button:active {
+    transform: scale(0.95);
+}
+
+#cooking-message {
+    width: 100%;
+    min-height: 90px;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+#food-inventory {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#food-inventory h3 {
+    margin: 0 0 12px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#food-list {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    overflow-y: auto;
+    padding: 5px;
+}
+
+.food-card {
+    min-height: 85px;
+    box-sizing: border-box;
+    border: 1px solid currentColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.food-card img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.food-card p {
+    margin: 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+.food-card p:last-child {
+    font-size: 11px;
+    opacity: 0.65;
+}
+
+.food-card.selected {
+    background: currentColor;
+    color: #000;
+    transform: scale(1.03);
+}
+
+#food-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+#food-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#food-list::-webkit-scrollbar-thumb {
+    background: currentColor;
+}
+
+#cooking .close-widget {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    cursor: pointer;
+}

@@ -1,0 +1,25 @@
+.barre-pv {
+    width: 70px;
+    height: 8px;
+    background: #222;
+    border: 1px solid #000;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.barre-pv-remplissage {
+    height: 100%;
+    transition: width 0.25s ease;
+}
+
+.pv-normal {
+    background: #00a000;
+}
+
+.pv-baisse {
+    background: #66cc66;
+}
+
+.pv-danger {
+    background: #d00000;
+}

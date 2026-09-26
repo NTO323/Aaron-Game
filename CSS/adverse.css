@@ -1,0 +1,123 @@
+
+/* ========================================
+   WIDGET ADVERSAIRE
+======================================== */
+
+/* CONTENEUR DES ADVERSAIRES */
+
+#adversaries-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+/* ADVERSAIRE */
+
+.adversary {
+    flex: 1;
+    min-height: 200px;
+
+    border: solid 2px #2c2c2c;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    box-sizing: border-box;
+
+    cursor: pointer;
+}
+
+
+/* IMAGE */
+
+.adversary img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+
+/* NOM */
+
+.adversary-name {
+    margin: 5px 0 0;
+    font-size: 10px;
+}
+
+
+/* RANG */
+
+.adversary-rank {
+    margin: 3px 0 0;
+    font-size: 9px;
+}
+
+
+/* DIFFICULTÉ */
+
+.adversary-difficulty {
+    margin: 8px 0 0;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+/* CONTENEUR DES ADVERSAIRES */
+
+#adversaries-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+/* ADVERSAIRES */
+
+.adversary {
+    width: 33.333%;
+    min-height: 200px;
+    border: solid 2px #2c2c2c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.adversary p {
+    margin: 0;
+}
+
+/* INFORMATIONS */
+
+#adversary-info {
+    margin: 10px 0 10px 0;
+    width: 100%;
+    min-height: 180px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 400px;
+    border: solid 2px #2c2c2c;
+}
+
+#adversary-info h3,
+#adversary-info p {
+    margin-top: 0;
+    font-size: 8px;
+}
+
+/* BOUTON COMMENCER */
+
+#start-fight {
+    margin-top: auto;
+    width: 100%;
+    padding: 15px;
+
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,57 @@
+#cooking-minigame {
+    width: 100%;
+    text-align: center;
+}
+
+#cooking-timing {
+    position: relative;
+    width: 85%;
+    height: 24px;
+    margin: 30px auto;
+    background: #222;
+    border: 2px solid #000;
+    overflow: hidden;
+}
+
+#cooking-target {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: linear-gradient(to right, #4285d4, #4caf50, #4285d4);
+}
+
+#cooking-perfect {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10%;
+    height: 100%;
+    transform: translateX(-50%);
+    background: #00a000;
+}
+
+#cooking-arrow {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 4px;
+    height: calc(100% + 10px);
+    background: #fff;
+    box-shadow: 0 0 4px #000;
+    transform: translateX(-50%);
+}
+
+#cooking-hit-button {
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#cooking-score {
+    min-height: 20px;
+    font-weight: bold;
+}
+.food-card.indisponible {
+    opacity: 0.4;
+    cursor: not-allowed;
+}

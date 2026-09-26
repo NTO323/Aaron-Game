@@ -1,0 +1,14 @@
+Ce qui a a ajouter : 
+
+- systeme de larme ==>
+ - - jauge par persos
+ - - 10 larmes différentes à obtenir en expe
+
+ - Attaque chargé de l'ennemis
+
+-  Systeme de jours apres chaque afrontement entre une autre équipe
+ - vague ennemis la nuit qui ne fait pas passé le jour contre
+ des monstres pour recup des ressoruces
+ - quete secondaire qui permette de recruter un hero
+ - quete principal avant x-jours, avec niveau et rang recomandé
+

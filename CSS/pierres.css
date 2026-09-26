@@ -1,0 +1,135 @@
+
+#pierres-interface{
+    width:100%;
+    height:100%;
+    position:relative;
+    box-sizing:border-box;
+    padding:20px;
+    color:white;
+    overflow-y:auto;
+        background-image:url("../IMG/bg3.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+#pierres-interface h2{
+    margin:10px 0 25px;
+    text-align:center;
+    font-size:22px;
+}
+
+#pierres-personnages-liste{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.pierres-personnage{
+    width:80px;
+    min-height:90px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:3px;
+    padding:6px;
+    box-sizing:border-box;
+    background:#292929;
+    border:2px solid #555;
+    color:white;
+}
+
+.pierres-personnage img{
+    width:45px;
+    height:45px;
+    object-fit:contain;
+}
+
+.pierres-personnage span{
+    font-size:10px;
+}
+
+.pierres-personnage small{
+    font-size:8px;
+}
+
+#expedition-pierres{
+    position:absolute;
+    top:180px;
+    left:50%;
+    transform:translateX(-50%);
+    width:80%;
+    max-width:350px;
+    padding:20px;
+    box-sizing:border-box;
+    text-align:center;
+    background:#292929;
+    border:2px solid #555;
+}
+
+#expedition-pierres h3{
+    margin:0 0 15px;
+    font-size:16px;
+}
+
+#expedition-pierres p{
+    font-size:11px;
+    margin:10px 0 20px;
+}
+
+#expedition-start-button{
+    padding:12px 20px;
+    cursor:pointer;
+}
+
+#expedition-temps{
+    font-size:20px;
+    margin-top:15px;
+}
+
+#expedition-resultats{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+}
+
+.expedition-aliment{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:11px;
+}
+
+.expedition-aliment img{
+    width:35px;
+    height:35px;
+    object-fit:contain;
+    image-rendering:pixelated;
+}
+
+#expedition-action{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:20px;
+}
+
+#reprendre-expedition{
+    width:180px;
+    height:60px;
+    border:none;
+    background:url("../IMG/button.png") center / 100% 100% no-repeat;
+    color:white;
+    font-family:"Pixeled",Arial,sans-serif;
+    font-size:18px;
+    text-shadow:-2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000;
+    cursor:pointer;
+}
+
+#reprendre-expedition:active{
+    transform:translateY(4px);
+}

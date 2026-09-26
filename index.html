@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AARON</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/inventaire.css">
+    <link rel="stylesheet" href="CSS/cuisine.css">
+    <link rel="stylesheet" href="CSS/cuisine-game.css">
+    <link rel="stylesheet" href="CSS/adverse.css">
+    <link rel="stylesheet" href="CSS/equipe.css">
+    <link rel="stylesheet" href="CSS/gameplay.css">
+    <link rel="stylesheet" href="CSS/combatbas.css">
+    <link rel="stylesheet" href="CSS/relation.css">
+    <link rel="stylesheet" href="CSS/pierres.css">
+    <link rel="stylesheet" href="CSS/repartition.css">
+    <link rel="stylesheet" href="CSS/minimap.css">
+    <link rel="stylesheet" href="CSS/dialoguecombat.css">
+    <link rel="stylesheet" href="CSS/dialogue-relation.css">
+    <link rel="stylesheet" href="CSS/relation-notification.css">
+    <link rel="stylesheet" href="CSS/barre-pv.css">
+
+</head>
+<body>
+    <main id="game">
+        <canvas id="canvas"></canvas>
+        <div id="campfire-animation">
+    <img src="IMG/feu01.png" alt="">
+    <img src="IMG/feu02.png" alt="">
+    <img src="IMG/feu03.png" alt="">
+    <img src="IMG/feu04.png" alt="">
+</div>
+        <div id="ui">
+            <section id="main-page">
+                <div id="rank-acount">
+    <p>RANG</p>
+    <p class="rank-number">-</p>
+</div>
+                <button id="delete-data">*</button>
+                                <div id="home-characters">
+
+    <div class="home-character home-character-1" data-slot="0"></div>
+    <div class="home-character home-character-2" data-slot="1"></div>
+    <div class="home-character home-character-3" data-slot="2"></div>
+    <div class="home-character home-character-4" data-slot="3"></div>
+
+</div>
+                <div class="content-button">
+                
+<button class="image-button" data-widget="characters">EQUIPE</button>
+<button class="image-button" data-widget="inventory">INVENTAIR</button>
+<button class="image-button" data-widget="cooking">CUISINER</button>
+<button class="image-button" data-widget="relation">RELATION</button>
+<button class="image-button" data-widget="adversary"><img src="IMG/iconebutton.png">COMBAT</button>   
+</div>
+            </section>
+
+            <!-- WIDGET INVENTAIRE -->
+    <section class="widget" id="inventory">
+        <button class="close-widget">×</button>
+        <h2>Inventaire</h2>
+        <div id="objects-list"></div>
+        <div id="objects-bio"></div>
+        <div id="inventory-team"></div>
+        <nav class="widget-nav">
+    <button data-widget="characters">EQUIPE</button>
+    <button data-widget="inventory">INVENTAIRE</button>
+    <button data-widget="cooking">CUISINE</button>
+    <button data-widget="relation">RELATION</button>
+</nav>
+    </section>
+
+<section class="widget" id="cooking">
+    <button class="close-widget">×</button>
+    <h2>Cuisiner</h2>
+
+    <div id="cooking-selection">
+        <div id="cooking-slots">
+            <div class="cooking-slot" data-slot="0"><span>+</span></div>
+            <div class="cooking-slot" data-slot="1"><span>+</span></div>
+            <div class="cooking-slot" data-slot="2"><span>+</span></div>
+            <div class="cooking-slot" data-slot="3"><span>+</span></div>
+        </div>
+
+        <button id="cook-button">CUISINER</button>
+        <p id="cooking-message"></p>
+
+        <div id="food-inventory">
+            <h3>ALIMENTS</h3>
+            <div id="food-list"></div>
+        </div>
+    </div>
+
+    <div id="cooking-minigame" style="display:none;">
+        <h3 id="cooking-minigame-title">CUISINE</h3>
+        <p id="cooking-minigame-info"></p>
+
+        <div id="cooking-timing">
+            <div id="cooking-target">
+                <div id="cooking-perfect"></div>
+            </div>
+            <div id="cooking-arrow"></div>
+        </div>
+
+        <button id="cooking-hit-button">VALIDER</button>
+        <p id="cooking-score"></p>
+    </div>
+    <nav class="widget-nav">
+    <button data-widget="characters">EQUIPE</button>
+    <button data-widget="inventory">INVENTAIRE</button>
+    <button data-widget="cooking">CUISINE</button>
+    <button data-widget="relation">RELATION</button>
+</nav>
+</section>
+
+
+<!-- WIDGET PERSONNAGES -->
+<section class="widget" id="characters">
+    <button class="close-widget">×</button>
+    <h2>Personnages</h2>
+    <div class="characters-team-section">
+        <p class="section-title">ÉQUIPE</p>
+        <div id="characters-team">
+        </div>
+        <p id="team-counter"></p>
+    </div>
+    <div class="characters-content">
+
+<div id="character-details">
+    <h3 id="character-detail-name">Sélectionne un personnage</h3>
+    <img id="character-detail-icon" src="" alt="">
+    <div class="character-detail-stats">
+        <p>Lvl : <span id="character-detail-level">-</span></p>
+        <p>PV : <span id="character-detail-pv">-</span></p>
+    </div>
+    <div class="character-detail-stats">
+        <p>ATT : <span id="character-detail-attack">-</span></p>
+        <p>DEF : <span id="character-detail-defense">-</span></p>
+        <p>VIT : <span id="character-detail-speed">-</span></p>
+    </div>
+
+    <p id="character-detail-bio"></p>
+</div>
+
+
+        <div id="characters-list">
+        </div>
+</div>
+<nav class="widget-nav">
+    <button data-widget="characters">EQUIPE</button>
+    <button data-widget="inventory">INVENTAIRE</button>
+    <button data-widget="cooking">CUISINE</button>
+    <button data-widget="relation">RELATION</button>
+</nav>
+</section>
+
+<section class="widget" id="relation">
+    <button class="close-widget">×</button>
+    <h2>Relations</h2>
+    <div id="relation-list"></div>
+    <div id="relation-details"></div>
+    <nav class="widget-nav">
+    <button data-widget="characters">EQUIPE</button>
+    <button data-widget="inventory">INVENTAIRE</button>
+    <button data-widget="cooking">CUISINE</button>
+    <button data-widget="relation">RELATION</button>
+</nav>
+</section>
+
+
+
+<!-- WIDGET ADVERSAIRE -->
+<section class="widget" id="adversary">
+    <button class="close-widget">×</button>
+    <!-- RANG -->
+<div id="adversary-rank">
+    <p>RANG</p>
+    <p class="adversary-rank-number">-</p>
+</div>
+    <!-- ADVERSAIRES -->
+    <div id="adversaries-container">
+    </div>
+    <!-- INFORMATIONS ADVERSAIRE -->
+    <div id="adversary-info">
+        <h3>Informations adversaire</h3>
+        <p>Sélectionne un adversaire pour voir ses informations.</p>
+    </div>
+    <!-- BOUTON COMMENCER -->
+    <button id="start-fight">COMMENCER</button>
+
+</section>
+<section id="combat">
+    <div id="equipe-joueur"></div>
+    <div id="equipe-ennemie"></div>
+    <button id="attack-button" disabled>ATTAQUER</button>
+
+    <div id="expedition-action" style="display:none;">
+        <button id="reprendre-expedition">REPRENDRE</button>
+    </div>
+</section>
+
+    </div>
+    </main>         
+        <script src="SRC/objets.js"></script>
+        <script src="SRC/aliment.js"></script>
+        <script src="SRC/larmes.js"></script>
+        <script src="SRC/rang.js"></script>
+        <script src="SRC/relation.js"></script>
+
+        <script src="SRC/character.js"></script>
+        <script src="SRC/niveau.js"></script>
+
+
+        <script src="SRC/relation_systeme.js"></script>
+        <script src="SRC/relation_notification.js"></script>
+        <script src="SRC/relation_dialogue.js"></script>
+
+        <script src="SRC/barre-pv.js"></script>
+        <script src="SRC/affichage_maison.js"></script>
+        <script src="SRC/widget_relation.js"></script>
+        <script src="SRC/dialogue-relation.js"></script>
+        <script src="SRC/adverse.js"></script>
+
+        <script src="SRC/game.js"></script>
+        <script src="SRC/widget_adverse.js"></script>
+        <script src="SRC/cuisine_minijeu.js"></script>
+        <script src="SRC/widget_ali.js"></script>
+        <script src="SRC/widget_equipe.js"></script>
+        <script src="SRC/widget_invent.js"></script>
+
+        <script src="SRC/fire.js"></script>
+
+        <script src="SRC/gameplay.js"></script>
+        <script src="SRC/play-dialogues.js"></script>
+        <script src="SRC/play-bas.js"></script>
+        <script src="SRC/play-pierres.js"></script>
+        <script src="SRC/play-affichage.js"></script>
+        <script src="SRC/play-attaque.js"></script>
+        <script src="SRC/play-repartition.js"></script>
+        <script src="SRC/play-fin.js"></script>
+    
+</body>
+</html>
+

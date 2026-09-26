@@ -1,0 +1,299 @@
+
+#relation {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+#relation h2 {
+    margin: 5px 0 25px;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#relation-list {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.relation-character {
+    flex: 0 0 75px;
+    height: 90px;
+    border: 1px solid currentColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.relation-character img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.relation-character p {
+    margin: 0;
+    font-size: 11px;
+    text-align: center;
+}
+
+.relation-character.selected {
+    background: currentColor;
+    color: #000;
+    transform: scale(1.03);
+}
+
+#relation-details {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    margin-top: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.relation-details-empty {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.relation-card {
+    width: 100%;
+    min-height: 75px;
+    box-sizing: border-box;
+    border: 1px solid currentColor;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 8px 12px;
+}
+
+.relation-card > img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    flex-shrink: 0;
+}
+
+.relation-card > p {
+    margin: 0;
+    min-width: 50px;
+}
+
+.relation-hearts {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.relation-hearts img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.relation-hearts .heart-empty {
+    filter: brightness(0);
+}
+
+#relation .close-widget {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#relation-list::-webkit-scrollbar,
+#relation-details::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+#relation-list::-webkit-scrollbar-track,
+#relation-details::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#relation-list::-webkit-scrollbar-thumb,
+#relation-details::-webkit-scrollbar-thumb {
+    background: currentColor;
+}
+
+
+#home-characters {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  
+}
+
+@keyframes relationHeart {
+    from {
+        transform: translateX(-50%) translateY(0);
+    }
+    to {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+
+
+
+.home-character {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: auto;
+      cursor: pointer;
+}
+
+/* Image du personnage */
+
+.home-character-content > img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    filter: brightness(0.8) sepia(0.40) saturate(2);
+}
+
+.home-character .relation-notification-heart {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    transform: translateX(-50%);
+    animation: relationHeart 0.8s ease-in-out infinite alternate;
+    z-index: 10;
+}
+
+/* ========================================
+   POSITION DES 4 PERSONNAGES
+======================================== */
+
+/* PERSONNAGE 1 — bas gauche */
+.home-character-1 {
+    left: 3%;
+    top: 54%;
+}
+
+/* PERSONNAGE 2 — haut gauche */
+.home-character-2 {
+    left: 18%;
+    top: 48%;
+}
+
+/* PERSONNAGE 3 — haut droite */
+.home-character-3 {
+    right: 18%;
+    top: 48%;
+}
+
+/* PERSONNAGE 4 — bas droite */
+.home-character-4 {
+    right: 3%;
+    top: 54%;
+}
+
+.home-character-level {
+    font-size: 11px;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.home-character-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-character-pv {
+    width: 70px;
+    margin-bottom: 5px;
+}
+
+.level-up-notification {
+    animation: levelUpBlink 0.7s ease-in-out infinite alternate;
+}
+
+@keyframes levelUpBlink {
+    from {
+        filter: drop-shadow(0 0 2px #00aaff) brightness(1);
+    }
+    to {
+        filter: drop-shadow(0 0 15px #00aaff) brightness(1.7);
+    }
+}
+
+@media (max-width: 600px) {
+    #relation {
+        padding: 20px 15px;
+    }
+
+    #relation h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .relation-character {
+        flex-basis: 65px;
+        height: 80px;
+    }
+
+    .relation-character img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .relation-card {
+        min-height: 65px;
+        gap: 10px;
+    }
+
+    .relation-card > img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .relation-hearts img {
+        width: 25px;
+        height: 25px;
+    }
+}
+

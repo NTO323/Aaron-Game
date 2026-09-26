@@ -1,0 +1,232 @@
+
+/* ========================================
+   WIDGET PERSONNAGES
+======================================== */
+
+#characters {
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 0;
+}
+
+/* ========================================
+   EQUIPE
+======================================== */
+
+.characters-team-section {
+    width: 100%;
+    flex-shrink: 0;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+#characters-team {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+#team-counter {
+    text-align: center;
+    font-size: 9px;
+    margin-top: 7px;
+}
+
+/* ========================================
+   GRANDE ZONE DU BAS
+======================================== */
+
+.characters-content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 400px;
+    flex: none;
+    min-height: 0;
+    overflow: hidden;
+    border: 2px solid #555;
+    border-radius: 10px;
+}
+
+/* ========================================
+   GAUCHE : DETAILS
+======================================== */
+
+#character-details {
+    width: 55%;
+    height: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    border-right: 2px solid #555;
+    overflow-y: auto;
+}
+
+#character-detail-name {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#character-detail-icon {
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+}
+
+.character-detail-stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 9px;
+}
+
+.character-detail-stats p {
+    white-space: nowrap;
+}
+
+#character-detail-bio {
+    width: 100%;
+    font-size: 9px;
+    line-height: 1.7;
+    text-align: left;
+}
+
+/* ========================================
+   DROITE : LISTE
+======================================== */
+
+#characters-list {
+    width: 45%;
+    height: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 8px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-shrink: 0;
+}
+
+/* ========================================
+   SLOTS EQUIPE
+======================================== */
+
+.team-slot {
+    position: relative;
+    width: 90px;
+    height: 180px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #666;
+    border-radius: 8px;
+    background-color: #222;
+    cursor: pointer;
+}
+
+.team-slot img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.team-slot:hover{
+    background-color: #555;
+    border-color: rgb(171, 214, 252);
+}
+
+.team-slot.selected {
+    border-color: rgb(84, 163, 233);
+}
+
+.team-slot-empty {
+    font-size: 20px;
+    color: #666;
+}
+
+.remove-team-character {
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #222;
+    color: white;
+    font-size: 13px;
+    line-height: 20px;
+    z-index: 2;
+    box-shadow: none;
+}
+
+/* ========================================
+   LISTE PERSONNAGES
+======================================== */
+
+.character-card {
+    width: 100%;
+    min-height: 75px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    background-color: #444;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.character-card:hover {
+    background-color: #555;
+}
+
+.character-card.selected {
+    border-color: rgb(84, 163, 233);
+}
+
+.character-card img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.character-card p {
+    font-size: 8px;
+    margin-top: 3px;
+}
+
+.character-card .character-level {
+    font-size: 7px;
+    opacity: 0.7;
+}
+
+.info-chara-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
