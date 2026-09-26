@@ -202,32 +202,28 @@
     z-index: 10;
 }
 
-/* ========================================
-   POSITION DES 4 PERSONNAGES
-======================================== */
-
 /* PERSONNAGE 1 — bas gauche */
 .home-character-1 {
     left: 3%;
-    top: 54%;
+    top: 50%;
 }
 
 /* PERSONNAGE 2 — haut gauche */
 .home-character-2 {
-    left: 18%;
-    top: 48%;
+    left: 19%;
+    top: 46%;
 }
 
 /* PERSONNAGE 3 — haut droite */
 .home-character-3 {
-    right: 18%;
-    top: 48%;
+    right: 19%;
+    top: 46%;
 }
 
 /* PERSONNAGE 4 — bas droite */
 .home-character-4 {
     right: 3%;
-    top: 54%;
+    top: 50%;
 }
 
 .home-character-level {
