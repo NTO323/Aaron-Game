@@ -48,18 +48,18 @@ body{
     flex-direction:column;
     top:0;
     left:25%;
-    width:150px;
-    height:150px;
+    width:120px;
+    height:120px;
     background:url("../IMG/rank.png") center / 100% 100% no-repeat;
 }
 
 #rank-acount p{
-    font-size:30px;
+    font-size:20px;
     color:rgb(245,231,209);
 }
 
 #rank-acount .rank-number{
-    font-size:50px;
+    font-size:35px;
     color:rgb(223,190,102);
 }
 
@@ -81,8 +81,8 @@ body{
     position:absolute;
     left:50%;
     top:calc(50% + 80px);
-    width:150px;
-    height:150px;
+    width:130px;
+    height:130px;
     transform:translate(-50%,-50%);
     pointer-events:none;
 }
@@ -91,8 +91,8 @@ body{
     position:absolute;
     left:0;
     top:0;
-    width:150px;
-    height:150px;
+    width:130px;
+    height:130px;
     image-rendering:pixelated;
     image-rendering:crisp-edges;
     object-fit:contain;
@@ -137,8 +137,15 @@ body{
     display:grid;
     grid-template-columns:repeat(2,1fr);
     width:100%;
-    max-width:350px;
+    max-width:400px;
     gap:5px;
+    justify-items:center;
+}
+.content-button .image-button:last-child{
+    grid-column:1 / -1;
+    justify-self:center;
+    width:160px;
+    height:60px;
 }
 
 #main-page{
@@ -159,15 +166,15 @@ body{
 }
 
 .image-button{
-    width:150px;
-    height:50px;
+    width:130px;
+    height:40px;
     padding:0;
-    margin:2px;
+    margin:1px;
     border:none;
     background:url("../IMG/button.png") center / 100% 100% no-repeat;
     box-shadow:0 2px 5px rgba(0,0,0,.7);
     font-family:"Pixeled",Arial,sans-serif;
-    font-size:18px;
+    font-size:14px;
     color:rgb(245,231,209);
     cursor:pointer;
     display:flex;
@@ -184,12 +191,6 @@ body{
     transform:translateY(5px);
 }
 
-.content-button .image-button:last-child{
-    grid-column:1 / -1;
-    justify-self:center;
-    width:180px;
-    height:60px;
-}
 
 .widget{
     width:100%;
